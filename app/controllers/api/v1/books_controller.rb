@@ -6,11 +6,12 @@ module Api
         type = book_params[:type]
         reservation_id = book_params[:reservation_id]
         guest_id = book_params[:guest_id]
+
         if type == 'reservation'
           reservation = Reservation.find_by(id: reservation_id)
           @reservation = ReservationsService.new(book_params).object_create(reservation)
           if @reservation.save
-            render json: @reservation
+            render json: @reservation, root: 'reservation', adapter: :json, each_serializer: ReservationSerializer
           end
         end
 
@@ -21,6 +22,7 @@ module Api
             render json: @guest
           end
         end
+        
       end
 
       private

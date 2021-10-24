@@ -46,7 +46,7 @@ class GuestSerializer < ActiveModel::Serializer
     object.number_of_infants
   end
 
-  def guests
+  def guest
     {
       first_name: object.first_name,
       last_name: object.last_name,

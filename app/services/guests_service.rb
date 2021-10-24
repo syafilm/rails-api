@@ -4,7 +4,7 @@ class GuestsService
     @last_name = params[:last_name]
     @phone = params[:phone]
     @email = params[:email]
-    @status = params[:status]
+    @status = params[:status].to_i
     @localized_description = params[:localized_description]
     @number_of_adults = params[:number_of_adults]
     @number_of_children = params[:number_of_children]
