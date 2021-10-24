@@ -17,6 +17,8 @@ gem 'jwt'
 gem 'dotenv-rails'
 
 gem 'active_model_serializers'
+
+gem 'rails_12factor'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
